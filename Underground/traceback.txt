@@ -1,0 +1,40 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/intro.rpy", line 96, in script
+    play music background
+  File "renpy/common/000statements.rpy", line 124, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 33, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/intro.rpy", line 96, in <module>
+    play music background
+NameError: name 'background' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/intro.rpy", line 96, in script
+    play music background
+  File "/Users/Annie/Downloads/renpy-8.3.4-sdk/renpy/ast.py", line 1980, in execute
+    self.call("execute")
+  File "/Users/Annie/Downloads/renpy-8.3.4-sdk/renpy/ast.py", line 1959, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Users/Annie/Downloads/renpy-8.3.4-sdk/renpy/statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 124, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 33, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "/Users/Annie/Downloads/renpy-8.3.4-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/Annie/Downloads/renpy-8.3.4-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/intro.rpy", line 96, in <module>
+    play music background
+NameError: name 'background' is not defined
+
+macOS-13.5.1-arm64-arm-64bit arm64
+Ren'Py 8.3.4.24120703
+Underground 1.0
+Mon Mar 10 13:24:13 2025
